@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <video class="video" width="240" height="400" loop>
+        <source src="video.mp4" type="video/mp4">
+      </video> 
+    </div>
+  </main>
+</body>
+<script>
+  let obj = document.querySelector(".video");
+
+  let options = {
+    threshold: 1.0
+  };
+  const intersectionCallback = (entries) => {
+    entries.forEach((entry) => {
+        let elem = entry.target;
+        if(entry.isIntersecting){
+          elem.play();
+        } else{
+          elem.pause();
+        }
+    });
+};
+
+  let observer = new window.IntersectionObserver(intersectionCallback, options)
+  observer.observe(obj);
+</script>
+</html>

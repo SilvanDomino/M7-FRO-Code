@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="obj">Content</div>
+    </div>
+  </main>
+</body>
+<script>
+  let obj = document.querySelector(".obj");
+
+  let options = {
+    threshold: 1.0
+  };
+  const intersectionCallback = (entries) => {
+    entries.forEach((entry) => {
+        let elem = entry.target;
+        entry.target.style.backgroundColor = entry.isIntersecting ? "blue" : "orange"
+        console.log(entry.intersectionRatio);
+    });
+};
+
+  let observer = new window.IntersectionObserver(intersectionCallback, options)
+  observer.observe(obj);
+</script>
+</html>
