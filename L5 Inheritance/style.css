@@ -1,0 +1,122 @@
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  display: flex;
+  font-family:Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #222725, #121113);
+  margin: 4rem;
+}
+.aside{
+  padding: 2rem;
+}
+.logo{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 5rem;
+  user-select: none; /* Standard syntax */
+}
+.navbar{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.nav__item{
+  display: grid;
+  grid-template-columns: 4rem 8rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: 0.2s ease background;
+}
+.nav__item:hover{
+  cursor: pointer;
+  background: #444;
+}
+main{
+  width: 100%;
+}
+.app{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+.post{
+  border: 1px solid rgba(100, 100, 100, 0.2);
+  width: 70rem;
+
+}
+.post__header{
+  display: flex;
+  padding: 1rem;
+  gap: 4rem;
+}
+.post__user{
+  display: flex;
+  align-items: center;
+}
+.user__avatar{
+  box-shadow: 0px 0px 0.1rem 0rem rgba(240, 240, 240, 0.7);
+  border-radius: 50%;
+  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+.post__follow{
+  display: flex;
+  align-items: center;
+  color: #00A878;
+  font-weight: 600;
+  padding:0.5rem;
+  
+}
+.post__follow:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.post__body{
+  overflow: hidden;
+  padding: 2rem 0rem;
+  
+}
+.post__fig{
+  
+}
+.post__img{
+  object-fit: cover;
+  width: 100%;
+}
+.button{
+  transition: 0.1s;
+}
+.button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  
+}
+
+.post__footer{
+  border-top: 1px solid #00A878;
+  display: flex;
+  margin: 0rem 2rem;
+  padding: 2rem 0rem;
+  gap: 3rem;
+  font-size: 3rem;
+}
+
+.--invisible{
+  display: none;
+}
